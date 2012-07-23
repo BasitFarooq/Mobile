@@ -1,4 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,7 +39,7 @@
                 return false;
             }
             var UserName = $.Storage.get("UserName");
-      
+
             if ($.Storage.get("UserName") == null || $.Storage.get("UserName") == "")
             { window.location.href = "login.html"; }
             else if ($.Storage.get("UserName") == "guest") {
@@ -263,8 +276,8 @@
 
             // alert(asdds);
             var d = new Date();
-            
-            var ID = $.Storage.get("UserName") +d.getDay()+d.getMonth()+d.getYear()+d.getSeconds()+d.getMilliseconds();
+
+            var ID = $.Storage.get("UserName") + d.getDay() + d.getMonth() + d.getYear() + d.getSeconds() + d.getMilliseconds();
             article.articleId = ID;
             article.authorUserName = $.Storage.get("UserName");
             article.text = $('#HtmlEditorArticle').val();
@@ -300,8 +313,8 @@
     dataType: "json",
 
     success: function (response, status) {
-        
-        var RedirectUrl = "ViewArticle.html?Id="+response.d;
+
+        var RedirectUrl = "ViewArticle.html?Id=" + response.d;
         window.location.href = RedirectUrl;
     },
     failure: function (msg) {
@@ -395,39 +408,11 @@
                                         <h5>
                                             Enter the Article's Title</h5>
                                         <input type="text" name="TextBoxTitle" id="TextBoxTitle"  />
-                                      <!--  <h5>
-                                            Select a Video to Attach (Optional)</h5>
-                                        <input type="file" name="FileUploadVideo" id="FileUploadVideo" />
-                                        <span>Or</span>-->
-                                        <h5>
+                                                                             <h5>
                                             Share a YouTube Link (Optional)</h5>
                                         <input type="text" name="TextBoxYouTubeLink" id="TextBoxYouTubeLink" value="" />
                                     </div>
-                                    <!-- <br />
-                                    <a href="#" title="#">How do I share a YouTube link?</a>
-                                    <br />
-                                    <br />-->
-                                    <!--<div class="uploadfiles">
-                                        <h6>
-                                            Article Thumbnail Image (Optional)</h6>
-                                        <p>
-                                            This is a thumbnail images that will appear next to your article when it is being
-                                            previewed throughout the site. This image is optional. If you don't choose an image,
-                                            your profile picture will be automatically used instead.
-                                        </p>
-                                       <!-- <h5>
-                                            Enter the Article's Title</h5>
-                                        <input type="text" name="#" value="Enter Title" />-->
-                                        
-                                        <!--<input type="file" name="FileUploadThumbnail" id="FileUploadThumbnail" value="Enter Title" />-->
-                                        <!--<input type="button" value="Browse">
-                                    </div>-->
-                                    <!-- <div class="uploadfiles">
-                                        <h5>
-                                            Upload Picture for Article from Webcam (Optional)</h5>
-                                        <a href="#">Upload Through Webcam</a><br>
-                                        <input type="button" name="btnUpload" id="btnUpload" value="Upload" onclick="CreateArticle()">
-                                    </div>-->
+                                   
                                     <div class="clearfix">
                                     </div>
                                     <br />
@@ -460,12 +445,9 @@
               <a href="index.html" title="home" target="_self">Home</a>
               <a href="static/Affiliates.html" title="Affiliates" target="_self">Affiliates</a>
               <a href= "static/CollegiateRecruiting.html"title="Collegiate Recruiting" target="_self">Collegiate Recruiting</a>
-           <!--   <a href="#.html" title="Philanthropy" target="#">Philanthropy</a>
-              <a href="#.html" title="Disability Sports" target="#">Disability Sports</a>-->
               <a href="static/Education.html" title="Education & Sports" target="_self">Education & Sports</a>
               <a href= "static/K2psZOO.html"title="K2psZOO" target="_self">K2psZOO</a>
               <a href= "static/NewsAndEvents.html"title="News & Events" target="_self">News & Events</a>
-           <!--   <a href="#.html" title="Sports Health & Fitness" target="_self">Sports Health & Fitness</a>-->
               <a href="static/SportsICandy.html" title="SportsiCandy" target="_self"><i>SportsiCandy</i></a>
               <a href="static/TechServices.html" title="Tech & Business Services" target="_self">Tech & Business Services</a>
               <a href= "static/Write4Kids2ProSports.html"title="Write4K2PS" target="_self">Write4K2PS</a>
